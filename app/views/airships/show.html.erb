@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ship code:</strong>
+  <%= @airship.ship_code %>
+</p>
+
+<p>
+  <strong>Ship type:</strong>
+  <%= @airship.ship_type %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @airship.capacity %>
+</p>
+
+<%= link_to 'Edit', edit_airship_path(@airship) %> |
+<%= link_to 'Back', airships_path %>

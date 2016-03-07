@@ -1,0 +1,29 @@
+<%= form_for(@airship) do |f| %>
+  <% if @airship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@airship.errors.count, "error") %> prohibited this airship from being saved:</h2>
+
+      <ul>
+      <% @airship.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ship_code %><br>
+    <%= f.text_field :ship_code %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_type %><br>
+    <%= f.text_field :ship_type %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br>
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

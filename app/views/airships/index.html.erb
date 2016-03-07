@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Airships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ship code</th>
+      <th>Ship type</th>
+      <th>Capacity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @airships.each do |airship| %>
+      <tr>
+        <td><%= airship.ship_code %></td>
+        <td><%= airship.ship_type %></td>
+        <td><%= airship.capacity %></td>
+        <td><%= link_to 'Show', airship %></td>
+        <td><%= link_to 'Edit', edit_airship_path(airship) %></td>
+        <td><%= link_to 'Destroy', airship, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Airship', new_airship_path %>
