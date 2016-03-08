@@ -11,13 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :day %><br>
-    <%= f.text_field :day %>
+  <div>
+    <%= f.label :airship_id, "Código o identificación del avión" %>
+    <%= f.select :airship_id, Airship.all.collect{|c| [c.ship_code, c.ship_code]}%>
   </div>
-  <div class="field">
-    <%= f.label :hour %><br>
-    <%= f.datetime_select :hour %>
+
+  <div>
+    <%= f.label :route_id, "Código de la ruta" %>
+    <%= f.select :route_id, Route.all.collect{|c| [c.code, c.code]} %>
+  </div>
+
+   <div class="field">
+    <%= f.label :date, "día y hora del vuelo"%><br>
+    <%= f.datetime_select :date %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307221951) do
+ActiveRecord::Schema.define(version: 20160308211604) do
 
   create_table "airships", force: :cascade do |t|
     t.string   "ship_code"
@@ -55,10 +55,11 @@ ActiveRecord::Schema.define(version: 20160307221951) do
   end
 
   create_table "schedules", force: :cascade do |t|
-    t.string   "day"
-    t.datetime "hour"
+    t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "airship_id"
+    t.integer  "route_id"
   end
 
 end
