@@ -13,12 +13,12 @@
 
   <div>
     <%= f.label :airship_id, "Código o identificación del avión" %>
-    <%= f.select :airship_id, Airship.all.collect{|c| [c.ship_code, c.ship_code]}%>
+    <%= f.select :airship_id, Airship.all.collect{|c| [c.ship_code, c.id]}%>
   </div>
 
   <div>
     <%= f.label :route_id, "Código de la ruta" %>
-    <%= f.select :route_id, Route.all.collect{|c| [c.code, c.code]} %>
+    <%= f.select :route_id, Route.all.collect{|c| [c.code, c.id]} %>
   </div>
 
    <div class="field">

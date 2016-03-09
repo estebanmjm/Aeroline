@@ -69,6 +69,6 @@ class RoutesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def route_params
-      params.require(:route).permit(:origin, :destiny, :code, :cost, { city_ids: [] })
+      params.require(:route).permit(:origin, :destiny, :code, :cost, { city_ids: [] }) 
     end
 end
