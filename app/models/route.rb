@@ -5,7 +5,7 @@ class Route < ActiveRecord::Base
 
    
 	
-	validates :code, presence: true, uniqueness: true, numericality: true, length: {is: 3} 
+	validates :code, presence: true, uniqueness: true 
 	validates :cost, presence: true, numericality: true 
 
 	validate :origin_destiny
